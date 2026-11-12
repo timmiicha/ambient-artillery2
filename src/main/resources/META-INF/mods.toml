@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="ambient_artillery"
+version="${file.jarVersion}"
+displayName="Ambient Artillery"
+description='''
+Distant artillery sound events with persistent small impact craters.
+'''
+
+[[dependencies.ambient_artillery]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.ambient_artillery]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.20.2)"
+ordering="NONE"
+side="BOTH"
