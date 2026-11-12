@@ -1,16 +1,15 @@
-# Ambient Artillery — Fabric 1.20.1
+# Ambient Artillery — Forge 1.20.1
 
-A small server-side Fabric mod that creates a three-impact artillery barrage.
+A server-side Forge mod that creates a three-impact artillery barrage.
 
 ## Requirements
 - Minecraft 1.20.1
-- Fabric Loader 0.15.0 or newer
-- Fabric API for Minecraft 1.20.1
+- Minecraft Forge 47.2.0 or newer in the 47.x line
 - Java 17
 
 ## Commands
 - `/artillery test` — launches a barrage.
-- `/artillery stop` — cancels all pending barrage events.
+- `/artillery stop` — cancels pending barrage events.
 
 ## Behaviour
 - Three impacts are placed in a random direction, 5–100 blocks from the player.
@@ -22,4 +21,4 @@ A small server-side Fabric mod that creates a three-impact artillery barrage.
 - No projectile entities or fire are created.
 
 ## Build
-Push to the `main` branch or run the **Build Fabric mod** workflow from the Actions tab. When the workflow succeeds, download the artifact named `ambient-artillery-1.20.1-fabric`. Extract the downloaded ZIP and put the JAR in your Minecraft `mods` folder.
+Push to `main` or run the **Build Forge mod** workflow in GitHub Actions. Download the artifact named `ambient-artillery-1.20.1-forge`, extract it, and put the regular JAR (not the sources JAR) in your Minecraft `mods` folder.
