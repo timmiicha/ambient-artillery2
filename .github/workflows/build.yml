@@ -29,9 +29,12 @@ jobs:
       - name: Build mod
         run: gradle --no-daemon build
 
-      - name: Upload JAR
+      - name: Show generated JARs
+        run: ls -lah build/libs/
+
+      - name: Upload Forge mod JAR
         uses: actions/upload-artifact@v4
         with:
           name: ambient-artillery-1.20.1-forge
-          path: build/libs/*-forge.jar
+          path: build/libs/*-forge-*.jar
           if-no-files-found: error
