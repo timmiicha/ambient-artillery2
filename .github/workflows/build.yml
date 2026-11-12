@@ -1,4 +1,4 @@
-name: Build Fabric mod
+name: Build Forge mod
 
 on:
   push:
@@ -10,8 +10,6 @@ permissions:
 
 jobs:
   build:
-    # Use the stable Ubuntu 22.04 image while troubleshooting hosted-runner
-    # assignment delays on ubuntu-latest.
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
@@ -23,10 +21,10 @@ jobs:
           distribution: temurin
           java-version: "17"
 
-      - name: Set up Gradle 8.7
+      - name: Set up Gradle 8.1.1
         uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: "8.7"
+          gradle-version: "8.1.1"
 
       - name: Build mod
         run: gradle --no-daemon build
@@ -34,6 +32,6 @@ jobs:
       - name: Upload JAR
         uses: actions/upload-artifact@v4
         with:
-          name: ambient-artillery-1.20.1-fabric
-          path: build/libs/*.jar
+          name: ambient-artillery-1.20.1-forge
+          path: build/libs/*-forge.jar
           if-no-files-found: error
